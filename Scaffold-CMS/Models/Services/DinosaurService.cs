@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Scaffold_CMS.Models.Services
 {
@@ -42,19 +43,22 @@ namespace Scaffold_CMS.Models.Services
             return _context.Dinosaur.Any(m => m.ID == id);
         }
 
-        public Task<Dinosaur> GetDinosaur(int id)
+        public async Task<Dinosaur> GetDinosaur(int id)
         {
-            throw new NotImplementedException();
+            var dinosaur = await _context.Dinosaur.FirstOrDefaultAsync(m => m.ID == id);
+                return dinosaur;
         }
 
-        public Task<IEnumerable<Dinosaur>> GetDinosaurs()
+        public async Task<IEnumerable<Dinosaur>> GetDinosaurs()
         {
-            throw new NotImplementedException();
+            var dinosaurs = await _context.Dinosaur.ToListAsync();
+            return dinosaurs;
         }
 
-        public Task UpdateDinosaur(int id, Dinosaur dinosaur)
+        public async Task UpdateDinosaur(int id, [Bind("ID,Name,Diet")]Dinosaur dinosaur)
         {
-            throw new NotImplementedException();
+            _context.Update(dinosaur);
+            await _context.SaveChangesAsync();
         }
     }
 }

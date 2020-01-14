@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Scaffold_CMS.Data;
+using Scaffold_CMS.Models.Interfaces;
+using Scaffold_CMS.Models.Services;
 
 namespace Scaffold_CMS
 {
@@ -33,6 +35,8 @@ namespace Scaffold_CMS
             services.AddMvc();
             services.AddDbContext<DinoDbContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IDinosaurManager, DinosaurService>();
 
         }
 

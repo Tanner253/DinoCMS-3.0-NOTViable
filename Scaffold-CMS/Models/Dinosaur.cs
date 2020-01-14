@@ -16,5 +16,9 @@ namespace Scaffold_CMS.Models
         [Required(ErrorMessage = "Please enter Cenrivore/Carnivore/Omnivore")]
         [Display(Name = "Diet")]
         public string Diet { get; set; }
+        public string DinoProfile { get; set; }
+        public string PackLimits { get; set; }
+
+     
     }
 }
