@@ -9,8 +9,8 @@ using Scaffold_CMS.Data;
 namespace Scaffold_CMS.Migrations
 {
     [DbContext(typeof(DinoDbContext))]
-    [Migration("20200114230612_init2")]
-    partial class init2
+    [Migration("20200120190300_init3")]
+    partial class init3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
