@@ -91,6 +91,7 @@ Unit testing is included in the AmandaFE/FrontendTesting project using the xUnit
 
 ## Change Log
 1.0: Launch (to come)
+1.1: CRUD Works
 
 ------------------------------
 
