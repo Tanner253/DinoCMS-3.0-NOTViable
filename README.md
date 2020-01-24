@@ -54,7 +54,6 @@ Once the database has been created, the application can be run. Options for runn
 cd YourRepo/YourProject
 dotnet run
 ```
-Unit testing is included in the AmandaFE/FrontendTesting project using the xUnit test framework. Tests have been provided for models, view models, controllers, and utility classes for the application.
 
 ---------------------------------
 
@@ -74,21 +73,13 @@ Unit testing is included in the AmandaFE/FrontendTesting project using the xUnit
 ![Details of Post](/Scaffold-CMS/Data/Readme/Details.JPG)
 
 ---------------------------
-## Data Flow (Frontend, Backend, REST API)
-***[Add a clean and clear explanation of what the data flow is. Walk me through it.]***
-![Data Flow Diagram](/assets/img/Flowchart.png)
 
 ---------------------------
-## Data Model
 
 ### Overall Project Schema
-***[Add a description of your DB schema. Explain the relationships to me.]***
-![Database Schema](/assets/img/ERD.png)
 
 ---------------------------
 ## Model Properties and Requirements
-
-
 ---------------------------
 
 ## Change Log
