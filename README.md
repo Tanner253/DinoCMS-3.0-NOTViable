@@ -62,7 +62,7 @@ Unit testing is included in the AmandaFE/FrontendTesting project using the xUnit
 
 
 ### Overview of Recent Posts
-![Create](/Data/Readme/Create.JPG)
+![Create](/Scaffold-CMS/Data/Readme/Create.JPG)
 
 ### Creating a Post
 ![Post Creation](https://via.placeholder.com/500x250)
