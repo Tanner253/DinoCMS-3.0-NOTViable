@@ -38,11 +38,11 @@ Initial build
 
 Clone this repository to your local machine.
 ```
-$ git clone https://github.com/YourRepo/YourProject.git
+$ git clone https://github.com/Tanner253/DinoCMS.git
 ```
 Once downloaded, you can either use the dotnet CLI utilities or Visual Studio 2017 (or greater) to build the web application. The solution file is located in the AmandaFE subdirectory at the root of the repository.
 ```
-cd YourRepo/YourProject
+cd DinoCMS/Scaffold
 dotnet build
 ```
 The dotnet tools will automatically restore any NuGet dependencies. Before running the application, the provided code-first migration will need to be applied to the SQL server of your choice configured in the /AmandaFE/AmandaFE/appsettings.json file. This requires the Microsoft.EntityFrameworkCore.Tools NuGet package and can be run from the NuGet Package Manager Console:
