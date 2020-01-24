@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Scaffold_CMS.Data;
 
 namespace Scaffold_CMS.Migrations
 {
     [DbContext(typeof(DinoDbContext))]
-    partial class DinoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200124191324_initmoretables")]
+    partial class initmoretables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

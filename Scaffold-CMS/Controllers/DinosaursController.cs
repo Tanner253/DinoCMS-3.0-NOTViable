@@ -54,7 +54,7 @@ namespace Scaffold_CMS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,Diet,DinoProfile,PackLimits")] Dinosaur dinosaur)
+        public async Task<IActionResult> Create([Bind("ID,Name,Diet,DinoProfile,PackLimits,Image,Additionalinfo")] Dinosaur dinosaur)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace Scaffold_CMS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Diet,DinoProfile,PackLimits")] Dinosaur dinosaur)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,Diet,DinoProfile,PackLimits,Image,Additionalinfo")] Dinosaur dinosaur)
         {
             if (id != dinosaur.ID)
             {

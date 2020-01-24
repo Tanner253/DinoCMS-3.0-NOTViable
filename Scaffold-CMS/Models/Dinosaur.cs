@@ -13,11 +13,14 @@ namespace Scaffold_CMS.Models
         [Required(ErrorMessage = "This is my custom error message")]
         [Display(Name = "Name")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "Please enter Cenrivore/Carnivore/Omnivore")]
+        [Required(ErrorMessage = "Please enter Carnivore/Herbivore/Omnivore")]
         [Display(Name = "Diet")]
         public string Diet { get; set; }
         public string DinoProfile { get; set; }
         public string PackLimits { get; set; }
+        public string Image { get; set; }
+
+        public string Additionalinfo { get; set; } = "null";
 
      
     }
