@@ -11,7 +11,7 @@
 
 ---------------------------------
 ## Web Application
-Stores data for each dino that is available in the game
+Stores data for each dino that is available in the game - making it available to the players.
 
 ---------------------------------
 
@@ -25,7 +25,7 @@ Microsoft Visual Studio Community 2019
 - xUnit
 - Bootstrap
 - Azure
-- Parallel Dots API
+
 
 ---------------------------------
 
