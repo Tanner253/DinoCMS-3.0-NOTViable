@@ -9,8 +9,8 @@ using Scaffold_CMS.Data;
 namespace Scaffold_CMS.Migrations
 {
     [DbContext(typeof(DinoDbContext))]
-    [Migration("20200124191324_initmoretables")]
-    partial class initmoretables
+    [Migration("20200125221341_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,11 +30,12 @@ namespace Scaffold_CMS.Migrations
                     b.Property<string>("Additionalinfo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Diet")
+                    b.Property<string>("Behavior")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DinoProfile")
+                    b.Property<string>("Diet")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
@@ -44,7 +45,15 @@ namespace Scaffold_CMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("NeedToKnow")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PackLimits")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SocialInteraction")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");

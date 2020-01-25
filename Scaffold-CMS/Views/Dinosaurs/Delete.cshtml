@@ -24,10 +24,22 @@
             @Html.DisplayFor(model => model.Diet)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DinoProfile)
+            @Html.DisplayNameFor(model => model.NeedToKnow)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DinoProfile)
+            @Html.DisplayFor(model => model.NeedToKnow)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Behavior)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Behavior)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SocialInteraction)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SocialInteraction)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.PackLimits)
@@ -51,7 +63,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="ID" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> 
-        <a class="btn btn-primary" asp-action="Index">Back to List</a>
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
     </form>
 </div>

@@ -28,11 +28,12 @@ namespace Scaffold_CMS.Migrations
                     b.Property<string>("Additionalinfo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Diet")
+                    b.Property<string>("Behavior")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DinoProfile")
+                    b.Property<string>("Diet")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
@@ -42,7 +43,15 @@ namespace Scaffold_CMS.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("NeedToKnow")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PackLimits")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SocialInteraction")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");

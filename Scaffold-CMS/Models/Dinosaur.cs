@@ -10,13 +10,24 @@ namespace Scaffold_CMS.Models
     {
         public int ID { get; set; }
 
-        [Required(ErrorMessage = "This is my custom error message")]
+        [Required(ErrorMessage = "Please make a valid entry")]
         [Display(Name = "Name")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Please enter Carnivore/Herbivore/Omnivore")]
         [Display(Name = "Diet")]
         public string Diet { get; set; }
-        public string DinoProfile { get; set; }
+
+        [Required(ErrorMessage = "Please make a valid entry")]
+        [Display(Name = "Need to know")]
+        public string NeedToKnow { get; set; }
+
+        [Required(ErrorMessage = "Please make a valid entry")]
+        public string Behavior { get; set; }
+
+        [Required(ErrorMessage = "Please make a valid entry")]
+        [Display(Name = "Social Interaction")]
+        public string SocialInteraction { get; set; }
+
         public string PackLimits { get; set; }
         public string Image { get; set; }
 

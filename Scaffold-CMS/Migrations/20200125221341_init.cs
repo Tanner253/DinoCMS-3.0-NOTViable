@@ -2,7 +2,7 @@
 
 namespace Scaffold_CMS.Migrations
 {
-    public partial class init3 : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,8 +14,12 @@ namespace Scaffold_CMS.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: false),
                     Diet = table.Column<string>(nullable: false),
-                    DinoProfile = table.Column<string>(nullable: true),
-                    PackLimits = table.Column<string>(nullable: true)
+                    NeedToKnow = table.Column<string>(nullable: false),
+                    Behavior = table.Column<string>(nullable: false),
+                    SocialInteraction = table.Column<string>(nullable: false),
+                    PackLimits = table.Column<string>(nullable: true),
+                    Image = table.Column<string>(nullable: true),
+                    Additionalinfo = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

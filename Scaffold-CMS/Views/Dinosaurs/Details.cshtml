@@ -23,10 +23,22 @@
             @Html.DisplayFor(model => model.Diet)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DinoProfile)
+            @Html.DisplayNameFor(model => model.NeedToKnow)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DinoProfile)
+            @Html.DisplayFor(model => model.NeedToKnow)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Behavior)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Behavior)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SocialInteraction)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SocialInteraction)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.PackLimits)
@@ -40,18 +52,15 @@
         <dd class = "col-sm-10">
             <img src="@Model.Image" alt="@Model.Name" />
         </dd>
-        @if(Model.Additionalinfo != "null"){
-        
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Additionalinfo)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Additionalinfo)
         </dd>
-        }
     </dl>
 </div>
 <div>
-    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.ID">Edit</a> 
-    <a class="btn btn-primary" asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
 </div>
