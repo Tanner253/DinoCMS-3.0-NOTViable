@@ -85,6 +85,8 @@ dotnet run
 ## Change Log
 1.0: Launch (to come)
 1.1: CRUD Works
+1.2: Crud cleaned up
+1.3: Working on Identity and authorization / Security
 
 ------------------------------
 
