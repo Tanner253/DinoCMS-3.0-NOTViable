@@ -5,11 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.SqlServer.Management.Smo;
 using Scaffold_CMS.Data;
+using Scaffold_CMS.Models;
 using Scaffold_CMS.Models.Interfaces;
 using Scaffold_CMS.Models.Services;
 
@@ -35,6 +38,16 @@ namespace Scaffold_CMS
             services.AddMvc();
             services.AddDbContext<DinoDbContext>(options =>
            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
+            });
+            services.AddIdentity<ApplicationUser, ApplicationRole>()
+        .AddEntityFrameworkStores<ApplicationDbContext>()
+        .AddDefaultTokenProviders();
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+           options.UseSqlServer(Configuration.GetConnectionString("IdentityDefault")));
 
             services.AddScoped<IDinosaurManager, DinosaurService>();
 

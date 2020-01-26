@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Scaffold_CMS.Models
 {
-    public class ApplicationUser : IdentityUser
+    public class ApplicationUser : IdentityUser<int>
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -15,7 +15,7 @@ namespace Scaffold_CMS.Models
 
     }
 
-    public static class ApplicationRoles
+    public class ApplicationRoles : IdentityRole<int>
     {
         public const string Member = "Member";
         public const string Admin = "ADMIN";
