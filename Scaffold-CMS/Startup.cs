@@ -36,12 +36,14 @@ namespace Scaffold_CMS
             services.AddControllersWithViews();
 
             services.AddMvc();
-            services.AddDbContext<DinoDbContext>(options =>
-           options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
             });
+            services.AddDbContext<DinoDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+
             services.AddIdentity<ApplicationUser, ApplicationRole>()
         .AddEntityFrameworkStores<ApplicationDbContext>()
         .AddDefaultTokenProviders();

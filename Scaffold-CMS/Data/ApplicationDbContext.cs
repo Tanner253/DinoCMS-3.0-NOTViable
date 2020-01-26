@@ -14,9 +14,6 @@ namespace Scaffold_CMS.Data
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, int>
     {
 
-        ApplicationDbContext(DbContextOptions<ApplicationDbContext> Options) : base(Options)
-        {
-        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
