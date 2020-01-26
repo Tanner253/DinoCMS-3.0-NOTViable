@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Scaffold_CMS.Models
 {
-    public class ApplicationUser : IdentityUser<int>
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public DateTime Birthday { get; set; }
-        public string Authorized { get; set; } = "false";
+    //public class ApplicationUser : IdentityUser<Guid>
+    //{
+    //    public string FirstName { get; set; }
+    //    public string LastName { get; set; }
+    //    public DateTime Birthday { get; set; }
+    //    public string Authorized { get; set; } = "false";
 
-    }
+    //}
 
-    public class ApplicationRoles : IdentityRole<int>
-    {
-        public const string Member = "Member";
-        public const string Admin = "ADMIN";
-    }
+    //public class ApplicationRoles : IdentityRole
+    //{
+    //    public const string Member = "Member";
+    //    public const string Admin = "ADMIN";
+    //}
 }

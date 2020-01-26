@@ -43,13 +43,13 @@ namespace Scaffold_CMS
             services.AddDbContext<DinoDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+        
+        //    services.AddIdentity<ApplicationUser, ApplicationRole>()
+        //.AddEntityFrameworkStores<ApplicationDbContext>()
+        //.AddDefaultTokenProviders();
 
-            services.AddIdentity<ApplicationUser, ApplicationRole>()
-        .AddEntityFrameworkStores<ApplicationDbContext>()
-        .AddDefaultTokenProviders();
-
-            services.AddDbContext<ApplicationDbContext>(options =>
-           options.UseSqlServer(Configuration.GetConnectionString("IdentityDefault")));
+        //    services.AddDbContext<ApplicationDbContext>(options =>
+        //   options.UseSqlServer(Configuration.GetConnectionString("IdentityDefault")));
 
             services.AddScoped<IDinosaurManager, DinosaurService>();
 
