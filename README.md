@@ -1,4 +1,4 @@
-#please see Tanner253/DinoCMS2.2 - Netcore3.0 is not viable yet 
+#please see Tanner253/DinoCMS2.2 - Netcore3.0 is not viable yet !!
 ---------------------------------
 ---------------------------------
 
